@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ItemCollectionViewCell" customModule="Rashanist" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="249" height="235"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="249" height="235"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="diA-0n-Tcd">
+                        <rect key="frame" x="10" y="5" width="229" height="165"/>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tVc-KC-W8K">
+                        <rect key="frame" x="10" y="170" width="229" height="60"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDo-Pw-kTA">
+                                <rect key="frame" x="0.0" y="0.0" width="30" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="scl-3w-8yo"/>
+                                </constraints>
+                                <color key="tintColor" red="0.12941176469999999" green="0.1333333333" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="minus.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="didMinus:" destination="gTV-IL-0wX" eventType="touchUpInside" id="gpK-bW-RFz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="254" verticalHuggingPriority="251" horizontalCompressionResistancePriority="754" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNE-mt-NNT">
+                                <rect key="frame" x="40" y="0.0" width="149" height="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2E-bb-wAO">
+                                <rect key="frame" x="199" y="0.0" width="30" height="60"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="plus.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="didAdd:" destination="gTV-IL-0wX" eventType="touchUpInside" id="eeU-NV-Q0I"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="8pf-sH-tJh"/>
+                            <constraint firstItem="s2E-bb-wAO" firstAttribute="width" secondItem="VDo-Pw-kTA" secondAttribute="width" id="ixa-Af-c5B"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="tVc-KC-W8K" secondAttribute="bottom" constant="5" id="2bB-Ws-clF"/>
+                <constraint firstItem="tVc-KC-W8K" firstAttribute="top" secondItem="diA-0n-Tcd" secondAttribute="bottom" id="3xP-WZ-DPt"/>
+                <constraint firstItem="tVc-KC-W8K" firstAttribute="trailing" secondItem="diA-0n-Tcd" secondAttribute="trailing" id="DYf-aK-K6f"/>
+                <constraint firstItem="diA-0n-Tcd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="IuW-7c-97k"/>
+                <constraint firstAttribute="trailing" secondItem="diA-0n-Tcd" secondAttribute="trailing" constant="10" id="bJ3-vY-XN3"/>
+                <constraint firstItem="diA-0n-Tcd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="s3k-91-xXu"/>
+                <constraint firstItem="tVc-KC-W8K" firstAttribute="leading" secondItem="diA-0n-Tcd" secondAttribute="leading" id="ztP-yu-EVL"/>
+            </constraints>
+            <size key="customSize" width="249" height="235"/>
+            <connections>
+                <outlet property="itemImageView" destination="diA-0n-Tcd" id="m6N-3c-RCS"/>
+                <outlet property="itemQuantityLabel" destination="UNE-mt-NNT" id="Rzu-H9-rgX"/>
+            </connections>
+            <point key="canvasLocation" x="281.8840579710145" y="37.834821428571423"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="minus.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
+    </resources>
+</document>
