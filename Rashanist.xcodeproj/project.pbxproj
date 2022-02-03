@@ -15,6 +15,7 @@
 		BEA49DB727ABE5AC00C4858C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA49DB627ABE5AC00C4858C /* HomeViewController.swift */; };
 		BEA49DBA27ABE81300C4858C /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA49DB827ABE81300C4858C /* ItemCollectionViewCell.swift */; };
 		BEA49DBB27ABE81300C4858C /* ItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEA49DB927ABE81300C4858C /* ItemCollectionViewCell.xib */; };
+		BEA49DC027ABF60400C4858C /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA49DBF27ABF60400C4858C /* CartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		BEA49DB627ABE5AC00C4858C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BEA49DB827ABE81300C4858C /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		BEA49DB927ABE81300C4858C /* ItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		BEA49DBF27ABF60400C4858C /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +62,42 @@
 		BEA49D9F27ABB27100C4858C /* Rashanist */ = {
 			isa = PBXGroup;
 			children = (
+				BEA49DBD27ABF5D900C4858C /* Views */,
+				BEA49DBC27ABF5D100C4858C /* Data */,
 				BEA49DA027ABB27100C4858C /* AppDelegate.swift */,
 				BEA49DA227ABB27100C4858C /* SceneDelegate.swift */,
-				BEA49DB427ABB64E00C4858C /* Item.swift */,
 				BEA49DA927ABB27200C4858C /* Assets.xcassets */,
 				BEA49DAB27ABB27200C4858C /* LaunchScreen.storyboard */,
 				BEA49DAE27ABB27200C4858C /* Info.plist */,
-				BEA49DB627ABE5AC00C4858C /* HomeViewController.swift */,
-				BEA49DB827ABE81300C4858C /* ItemCollectionViewCell.swift */,
-				BEA49DB927ABE81300C4858C /* ItemCollectionViewCell.xib */,
 			);
 			path = Rashanist;
+			sourceTree = "<group>";
+		};
+		BEA49DBC27ABF5D100C4858C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BEA49DB427ABB64E00C4858C /* Item.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		BEA49DBD27ABF5D900C4858C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BEA49DBE27ABF5E700C4858C /* cells */,
+				BEA49DB627ABE5AC00C4858C /* HomeViewController.swift */,
+				BEA49DBF27ABF60400C4858C /* CartView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BEA49DBE27ABF5E700C4858C /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				BEA49DB927ABE81300C4858C /* ItemCollectionViewCell.xib */,
+				BEA49DB827ABE81300C4858C /* ItemCollectionViewCell.swift */,
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEA49DC027ABF60400C4858C /* CartView.swift in Sources */,
 				BEA49DBA27ABE81300C4858C /* ItemCollectionViewCell.swift in Sources */,
 				BEA49DB527ABB64E00C4858C /* Item.swift in Sources */,
 				BEA49DA127ABB27100C4858C /* AppDelegate.swift in Sources */,

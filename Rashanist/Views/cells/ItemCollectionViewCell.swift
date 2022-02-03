@@ -13,11 +13,13 @@ class ItemCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var itemQuantityLabel: UILabel!
     
     private var item: Item?
+    private var delegate: HomeViewDelegate?
     
     override func prepareForReuse() {
         item = nil
         itemImageView.image = nil
         itemQuantityLabel.text = nil
+        delegate = nil
         super.prepareForReuse()
     }
     
@@ -30,15 +32,18 @@ class ItemCollectionViewCell: UICollectionViewCell {
         guard let quantity = item?.quantity, quantity > .zero else { return }
         item?.quantity -= 1
         itemQuantityLabel.text = item?.quantity.description
+        delegate?.shouldUpdateCart()
     }
     
     @IBAction func didAdd(_ sender: Any) {
         item?.quantity += 1
         itemQuantityLabel.text = item?.quantity.description
+        delegate?.shouldUpdateCart()
     }
     
-    func configure(_ item: Item) {
+    func configure(_ item: Item, delegate: HomeViewDelegate) {
         self.item = item
+        self.delegate = delegate
         itemImageView.image = UIImage(named: item.imageUrl)
         itemQuantityLabel.text = item.quantity.description
     }
