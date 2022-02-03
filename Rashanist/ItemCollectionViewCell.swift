@@ -42,10 +42,6 @@ class ItemCollectionViewCell: UICollectionViewCell {
         itemImageView.image = UIImage(named: item.imageUrl)
         itemQuantityLabel.text = item.quantity.description
     }
-    
-    func selectedItem() -> Item? {
-        return self.item
-    }
 }
 
 extension ItemCollectionViewCell {

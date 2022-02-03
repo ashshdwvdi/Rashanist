@@ -7,10 +7,16 @@
 
 import Foundation
 
-struct Item {
+class Item {
     let name: String
-    var quantity: UInt
+    var quantity: Int
     let imageUrl: String
+    
+    init(name: String, quantity: Int, imageUrl: String) {
+        self.name = name
+        self.quantity = quantity
+        self.imageUrl = imageUrl
+    }
 }
 
 typealias Items = [Item]
