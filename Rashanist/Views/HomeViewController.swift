@@ -38,7 +38,7 @@ final class HomeViewController: UIViewController {
     
     private let transition: BubbleTransition = BubbleTransition()
     
-    private lazy var pdfPreviewViewController = PdfPreviewViewController(self.selectedItems())
+    private lazy var pdfPreviewViewController = PdfPreviewViewController(self.selectedItems().writableDescription)
     
     override func viewDidLoad() {
         super.viewDidLoad()

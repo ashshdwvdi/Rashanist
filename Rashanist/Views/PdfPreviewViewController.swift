@@ -36,11 +36,16 @@ final class PdfPreviewViewController: UIViewController {
         return button
     }()
     
-    private let items: Items
+    private let writableString: String
     
-    init(_ itemList: Items) {
-        self.items = itemList
+    init(_ writableString: String) {
+        self.writableString = writableString
         super.init(nibName: nil, bundle: nil)
+        
+        DispatchQueue.main.async { [weak self] in
+            guard let `self` = self else { return }
+            self.preview.document = PDFDocument(data: self.create())
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -82,6 +87,7 @@ final class PdfPreviewViewController: UIViewController {
         preview.trailingAnchor.constraint(equalTo: shareButton.trailingAnchor).isActive = true
         preview.topAnchor.constraint(equalTo: closeButton.bottomAnchor, constant: 5).isActive = true
         preview.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        preview.autoScales = true
     }
     
     @objc private func didCloseTapped() {
@@ -89,6 +95,40 @@ final class PdfPreviewViewController: UIViewController {
     }
     
     @objc private func didShareTapped() {
+        guard let pdfData = preview.document?.dataRepresentation() else { return }
         
+        let vc = UIActivityViewController(
+          activityItems: [pdfData],
+          applicationActivities: []
+        )
+        present(vc, animated: true, completion: nil)
+    }
+    
+    private func create() -> Data {
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = .natural
+        paragraphStyle.lineBreakMode = .byWordWrapping
+        
+        let pdfMetaData = [
+            kCGPDFContextCreator: "Rashan List",
+            kCGPDFContextAuthor: "Ashish"
+        ]
+        let format = UIGraphicsPDFRendererFormat()
+        format.documentInfo = pdfMetaData as [String: Any]
+        
+        let pageWidth = 8.5 * 72.0
+        let pageHeight = 11 * 72.0
+        let pageRect = CGRect(x: 0, y: 0, width: pageWidth, height: pageHeight)
+        let renderer = UIGraphicsPDFRenderer(bounds: pageRect, format: format)
+        let data = renderer.pdfData { (context) in
+            context.beginPage()
+            let attributes = [
+                NSAttributedString.Key.paragraphStyle: paragraphStyle,
+                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 22.0)
+            ]
+            writableString.draw(at: CGPoint(x: 0, y: 0), withAttributes: attributes)
+        }
+        
+        return data
     }
 }

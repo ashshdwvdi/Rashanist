@@ -85,3 +85,10 @@ extension Items {
         Item(name: "Hit", quantity: 0, imageUrl: "hit")
     ]
 }
+
+extension Items {
+    
+    var writableDescription: String {
+        return self.map { "› \($0.name), quantity: \($0.quantity)" }.joined(separator: "\n")
+    }
+}
