@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import BubbleTransition
 
 protocol HomeViewDelegate: AnyObject {
     func shouldUpdateCart()
@@ -34,6 +35,8 @@ final class HomeViewController: UIViewController {
     }()
     
     private var shouldHideCartView: Bool = true
+    
+    private let transition: BubbleTransition = BubbleTransition()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,8 +72,13 @@ final class HomeViewController: UIViewController {
         cartView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 50).isActive = true
     }
     
+    let myVc = UIViewController()
     private func printList() {
-        print("Print list tapped 🖨")
+        myVc.transitioningDelegate = self
+        myVc.modalPresentationCapturesStatusBarAppearance = true
+        myVc.modalPresentationStyle = .custom
+        myVc.view.backgroundColor = .black
+        self.present(myVc, animated: true, completion: nil)
     }
     
     private func updatCartItems() {
@@ -174,5 +182,25 @@ extension HomeViewController: HomeViewDelegate {
                 }
             }
         }
+    }
+}
+
+
+// MARK: UIViewControllerTransitioningDelegate
+
+extension HomeViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .present
+        transition.startingPoint = cartView.printButton.center
+        transition.bubbleColor = .black
+        return transition
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .dismiss
+        transition.startingPoint = cartView.printButton.center
+        transition.bubbleColor = .black
+        return transition
     }
 }

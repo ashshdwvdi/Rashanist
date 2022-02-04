@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D171EDB73A07819B692CEF2 /* Pods_Rashanist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 334CA761E385C2C97B8E70D5 /* Pods_Rashanist.framework */; };
+		14B57B75848950FEC360A60B /* Pods_Rashanist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5C78AC622C2B2E1EA59D84D /* Pods_Rashanist.framework */; };
 		BE39F8DE27ACE3C500CD1712 /* CartItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE39F8DD27ACE3C500CD1712 /* CartItemCollectionViewCell.swift */; };
 		BEA49DA127ABB27100C4858C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA49DA027ABB27100C4858C /* AppDelegate.swift */; };
 		BEA49DA327ABB27100C4858C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA49DA227ABB27100C4858C /* SceneDelegate.swift */; };
@@ -21,9 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		334CA761E385C2C97B8E70D5 /* Pods_Rashanist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rashanist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		84C90EE6F49E75F76B75ECEA /* Pods-Rashanist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rashanist.debug.xcconfig"; path = "Target Support Files/Pods-Rashanist/Pods-Rashanist.debug.xcconfig"; sourceTree = "<group>"; };
-		84CA65B9F4ED9D304E85477E /* Pods-Rashanist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rashanist.release.xcconfig"; path = "Target Support Files/Pods-Rashanist/Pods-Rashanist.release.xcconfig"; sourceTree = "<group>"; };
+		174C804E7F45796F92241258 /* Pods-Rashanist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rashanist.release.xcconfig"; path = "Target Support Files/Pods-Rashanist/Pods-Rashanist.release.xcconfig"; sourceTree = "<group>"; };
+		1FC963D30AD8AC4DCEACD474 /* Pods-Rashanist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rashanist.debug.xcconfig"; path = "Target Support Files/Pods-Rashanist/Pods-Rashanist.debug.xcconfig"; sourceTree = "<group>"; };
 		BE39F8DD27ACE3C500CD1712 /* CartItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		BEA49D9D27ABB27100C4858C /* Rashanist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rashanist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA49DA027ABB27100C4858C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +35,7 @@
 		BEA49DB827ABE81300C4858C /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		BEA49DB927ABE81300C4858C /* ItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		BEA49DBF27ABF60400C4858C /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		C5C78AC622C2B2E1EA59D84D /* Pods_Rashanist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rashanist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,19 +43,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D171EDB73A07819B692CEF2 /* Pods_Rashanist.framework in Frameworks */,
+				14B57B75848950FEC360A60B /* Pods_Rashanist.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		87103190D9E69B872D08B6A8 /* Pods */ = {
+		86A17D4B721EACD456A5A9F6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				84C90EE6F49E75F76B75ECEA /* Pods-Rashanist.debug.xcconfig */,
-				84CA65B9F4ED9D304E85477E /* Pods-Rashanist.release.xcconfig */,
+				1FC963D30AD8AC4DCEACD474 /* Pods-Rashanist.debug.xcconfig */,
+				174C804E7F45796F92241258 /* Pods-Rashanist.release.xcconfig */,
 			);
+			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -64,8 +65,8 @@
 			children = (
 				BEA49D9F27ABB27100C4858C /* Rashanist */,
 				BEA49D9E27ABB27100C4858C /* Products */,
-				87103190D9E69B872D08B6A8 /* Pods */,
-				F46243835060C6F1080CFEFC /* Frameworks */,
+				86A17D4B721EACD456A5A9F6 /* Pods */,
+				CDFD211FF85F69C72A22D369 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,10 +120,10 @@
 			path = cells;
 			sourceTree = "<group>";
 		};
-		F46243835060C6F1080CFEFC /* Frameworks */ = {
+		CDFD211FF85F69C72A22D369 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				334CA761E385C2C97B8E70D5 /* Pods_Rashanist.framework */,
+				C5C78AC622C2B2E1EA59D84D /* Pods_Rashanist.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -384,7 +385,7 @@
 		};
 		BEA49DB227ABB27200C4858C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 84C90EE6F49E75F76B75ECEA /* Pods-Rashanist.debug.xcconfig */;
+			baseConfigurationReference = 1FC963D30AD8AC4DCEACD474 /* Pods-Rashanist.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -413,7 +414,7 @@
 		};
 		BEA49DB327ABB27200C4858C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 84CA65B9F4ED9D304E85477E /* Pods-Rashanist.release.xcconfig */;
+			baseConfigurationReference = 174C804E7F45796F92241258 /* Pods-Rashanist.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
