@@ -87,7 +87,7 @@ final class HomeViewController: UIViewController {
             
             self.cartView.alpha = 1.0
             
-            UIView.animate(withDuration: 0.75, delay: 0.0, options: .transitionCurlDown) { [weak self] in
+            UIView.animate(withDuration: 0.75, delay: 0.0, options: .curveEaseInOut) { [weak self] in
                 self?.cartView.alpha = 0.0
             } completion: { [weak self] finished in
                 if finished {
@@ -136,7 +136,7 @@ extension HomeViewController: HomeViewDelegate {
             self.cartView.alpha = 0
             self.shouldHideCartView = false
             
-            UIView.animate(withDuration: 0.75, delay: 0.0, options: .transitionCurlUp) { [weak self] in
+            UIView.animate(withDuration: 0.75, delay: 0.0, options: .curveEaseInOut) { [weak self] in
                 self?.cartView.alpha = 1.0
             } completion: { [weak self] finished in
                 if finished {
