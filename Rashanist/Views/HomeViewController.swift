@@ -38,8 +38,6 @@ final class HomeViewController: UIViewController {
     
     private let transition: BubbleTransition = BubbleTransition()
     
-    private lazy var pdfPreviewViewController = PdfPreviewViewController(self.selectedItems().writableDescription)
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -75,6 +73,7 @@ final class HomeViewController: UIViewController {
     }
     
     private func printList() {
+        let pdfPreviewViewController = PdfPreviewViewController(self.selectedItems().writableDescription)
         pdfPreviewViewController.transitioningDelegate = self
         pdfPreviewViewController.modalPresentationCapturesStatusBarAppearance = true
         pdfPreviewViewController.modalPresentationStyle = .custom
