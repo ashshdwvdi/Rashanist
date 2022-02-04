@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D171EDB73A07819B692CEF2 /* Pods_Rashanist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 334CA761E385C2C97B8E70D5 /* Pods_Rashanist.framework */; };
+		BE39F8DE27ACE3C500CD1712 /* CartItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE39F8DD27ACE3C500CD1712 /* CartItemCollectionViewCell.swift */; };
 		BEA49DA127ABB27100C4858C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA49DA027ABB27100C4858C /* AppDelegate.swift */; };
 		BEA49DA327ABB27100C4858C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA49DA227ABB27100C4858C /* SceneDelegate.swift */; };
 		BEA49DAA27ABB27200C4858C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA49DA927ABB27200C4858C /* Assets.xcassets */; };
@@ -19,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		334CA761E385C2C97B8E70D5 /* Pods_Rashanist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rashanist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84C90EE6F49E75F76B75ECEA /* Pods-Rashanist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rashanist.debug.xcconfig"; path = "Target Support Files/Pods-Rashanist/Pods-Rashanist.debug.xcconfig"; sourceTree = "<group>"; };
+		84CA65B9F4ED9D304E85477E /* Pods-Rashanist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rashanist.release.xcconfig"; path = "Target Support Files/Pods-Rashanist/Pods-Rashanist.release.xcconfig"; sourceTree = "<group>"; };
+		BE39F8DD27ACE3C500CD1712 /* CartItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		BEA49D9D27ABB27100C4858C /* Rashanist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rashanist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA49DA027ABB27100C4858C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEA49DA227ABB27100C4858C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D171EDB73A07819B692CEF2 /* Pods_Rashanist.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		87103190D9E69B872D08B6A8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				84C90EE6F49E75F76B75ECEA /* Pods-Rashanist.debug.xcconfig */,
+				84CA65B9F4ED9D304E85477E /* Pods-Rashanist.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BEA49D9427ABB27100C4858C = {
 			isa = PBXGroup;
 			children = (
 				BEA49D9F27ABB27100C4858C /* Rashanist */,
 				BEA49D9E27ABB27100C4858C /* Products */,
+				87103190D9E69B872D08B6A8 /* Pods */,
+				F46243835060C6F1080CFEFC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,8 +114,17 @@
 			children = (
 				BEA49DB927ABE81300C4858C /* ItemCollectionViewCell.xib */,
 				BEA49DB827ABE81300C4858C /* ItemCollectionViewCell.swift */,
+				BE39F8DD27ACE3C500CD1712 /* CartItemCollectionViewCell.swift */,
 			);
 			path = cells;
+			sourceTree = "<group>";
+		};
+		F46243835060C6F1080CFEFC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				334CA761E385C2C97B8E70D5 /* Pods_Rashanist.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -107,9 +134,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BEA49DB127ABB27200C4858C /* Build configuration list for PBXNativeTarget "Rashanist" */;
 			buildPhases = (
+				935E53382018AF4C8D1E2920 /* [CP] Check Pods Manifest.lock */,
 				BEA49D9927ABB27100C4858C /* Sources */,
 				BEA49D9A27ABB27100C4858C /* Frameworks */,
 				BEA49D9B27ABB27100C4858C /* Resources */,
+				8585F306AF03C4812F191F5C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -166,6 +195,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8585F306AF03C4812F191F5C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Rashanist/Pods-Rashanist-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Rashanist/Pods-Rashanist-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Rashanist/Pods-Rashanist-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		935E53382018AF4C8D1E2920 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rashanist-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BEA49D9927ABB27100C4858C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -173,6 +244,7 @@
 			files = (
 				BEA49DC027ABF60400C4858C /* CartView.swift in Sources */,
 				BEA49DBA27ABE81300C4858C /* ItemCollectionViewCell.swift in Sources */,
+				BE39F8DE27ACE3C500CD1712 /* CartItemCollectionViewCell.swift in Sources */,
 				BEA49DB527ABB64E00C4858C /* Item.swift in Sources */,
 				BEA49DA127ABB27100C4858C /* AppDelegate.swift in Sources */,
 				BEA49DA327ABB27100C4858C /* SceneDelegate.swift in Sources */,
@@ -312,6 +384,7 @@
 		};
 		BEA49DB227ABB27200C4858C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84C90EE6F49E75F76B75ECEA /* Pods-Rashanist.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -340,6 +413,7 @@
 		};
 		BEA49DB327ABB27200C4858C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84CA65B9F4ED9D304E85477E /* Pods-Rashanist.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
