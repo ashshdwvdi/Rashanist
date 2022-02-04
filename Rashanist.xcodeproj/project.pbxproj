@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		14B57B75848950FEC360A60B /* Pods_Rashanist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5C78AC622C2B2E1EA59D84D /* Pods_Rashanist.framework */; };
 		BE39F8DE27ACE3C500CD1712 /* CartItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE39F8DD27ACE3C500CD1712 /* CartItemCollectionViewCell.swift */; };
+		BE4E2B3727ACEC940003DAA2 /* PdfPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4E2B3627ACEC940003DAA2 /* PdfPreviewViewController.swift */; };
 		BEA49DA127ABB27100C4858C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA49DA027ABB27100C4858C /* AppDelegate.swift */; };
 		BEA49DA327ABB27100C4858C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA49DA227ABB27100C4858C /* SceneDelegate.swift */; };
 		BEA49DAA27ABB27200C4858C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA49DA927ABB27200C4858C /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 		174C804E7F45796F92241258 /* Pods-Rashanist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rashanist.release.xcconfig"; path = "Target Support Files/Pods-Rashanist/Pods-Rashanist.release.xcconfig"; sourceTree = "<group>"; };
 		1FC963D30AD8AC4DCEACD474 /* Pods-Rashanist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rashanist.debug.xcconfig"; path = "Target Support Files/Pods-Rashanist/Pods-Rashanist.debug.xcconfig"; sourceTree = "<group>"; };
 		BE39F8DD27ACE3C500CD1712 /* CartItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		BE4E2B3627ACEC940003DAA2 /* PdfPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfPreviewViewController.swift; sourceTree = "<group>"; };
 		BEA49D9D27ABB27100C4858C /* Rashanist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rashanist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA49DA027ABB27100C4858C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEA49DA227ABB27100C4858C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,7 +58,6 @@
 				1FC963D30AD8AC4DCEACD474 /* Pods-Rashanist.debug.xcconfig */,
 				174C804E7F45796F92241258 /* Pods-Rashanist.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -106,6 +107,7 @@
 				BEA49DBE27ABF5E700C4858C /* cells */,
 				BEA49DB627ABE5AC00C4858C /* HomeViewController.swift */,
 				BEA49DBF27ABF60400C4858C /* CartView.swift */,
+				BE4E2B3627ACEC940003DAA2 /* PdfPreviewViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -247,6 +249,7 @@
 				BEA49DBA27ABE81300C4858C /* ItemCollectionViewCell.swift in Sources */,
 				BE39F8DE27ACE3C500CD1712 /* CartItemCollectionViewCell.swift in Sources */,
 				BEA49DB527ABB64E00C4858C /* Item.swift in Sources */,
+				BE4E2B3727ACEC940003DAA2 /* PdfPreviewViewController.swift in Sources */,
 				BEA49DA127ABB27100C4858C /* AppDelegate.swift in Sources */,
 				BEA49DA327ABB27100C4858C /* SceneDelegate.swift in Sources */,
 				BEA49DB727ABE5AC00C4858C /* HomeViewController.swift in Sources */,

@@ -38,6 +38,8 @@ final class HomeViewController: UIViewController {
     
     private let transition: BubbleTransition = BubbleTransition()
     
+    private lazy var pdfPreviewViewController = PdfPreviewViewController(self.selectedItems())
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -72,13 +74,12 @@ final class HomeViewController: UIViewController {
         cartView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 50).isActive = true
     }
     
-    let myVc = UIViewController()
     private func printList() {
-        myVc.transitioningDelegate = self
-        myVc.modalPresentationCapturesStatusBarAppearance = true
-        myVc.modalPresentationStyle = .custom
-        myVc.view.backgroundColor = .black
-        self.present(myVc, animated: true, completion: nil)
+        pdfPreviewViewController.transitioningDelegate = self
+        pdfPreviewViewController.modalPresentationCapturesStatusBarAppearance = true
+        pdfPreviewViewController.modalPresentationStyle = .custom
+        pdfPreviewViewController.view.backgroundColor = .white
+        navigationController?.present(pdfPreviewViewController, animated: true, completion: nil)
     }
     
     private func updatCartItems() {
@@ -193,14 +194,14 @@ extension HomeViewController: UIViewControllerTransitioningDelegate {
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         transition.transitionMode = .present
         transition.startingPoint = cartView.printButton.center
-        transition.bubbleColor = .black
+        transition.bubbleColor = .white
         return transition
     }
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         transition.transitionMode = .dismiss
         transition.startingPoint = cartView.printButton.center
-        transition.bubbleColor = .black
+        transition.bubbleColor = .white
         return transition
     }
 }

@@ -21,7 +21,7 @@ class CartView: UIView {
     // Need this button for transition
     let printButton: UIButton = {
         let button = UIButton()
-        let largeConfig = UIImage.SymbolConfiguration(pointSize: 140, weight: .bold, scale: .large)
+        let largeConfig = UIImage.SymbolConfiguration(pointSize: 80, weight: .bold, scale: .large)
         let largeBoldDoc = UIImage(systemName: "doc.circle.fill", withConfiguration: largeConfig)
         button.setImage(largeBoldDoc, for: .normal)
         button.tintColor = .black
