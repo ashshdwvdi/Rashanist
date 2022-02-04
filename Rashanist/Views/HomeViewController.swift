@@ -87,7 +87,7 @@ final class HomeViewController: UIViewController {
             
             self.cartView.alpha = 1.0
             
-            UIView.animate(withDuration: 0.75, delay: 0.0, options: .curveEaseInOut) { [weak self] in
+            UIView.animate(withDuration: 0.75, delay: 0.0, options: .allowAnimatedContent) { [weak self] in
                 self?.cartView.alpha = 0.0
             } completion: { [weak self] finished in
                 if finished {
@@ -111,7 +111,36 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Self.cellIdentifier, for: indexPath) as! ItemCollectionViewCell
         cell.configure(data[indexPath.item], delegate: self)
+        cell.alpha = 0.0
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        UIView.animate(withDuration: 0.7, delay: 0.0, options: .allowAnimatedContent, animations: {
+            cell.alpha = 1.0
+        })
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        UIView.animate(
+            withDuration: 0.4,
+            delay: 0,
+            usingSpringWithDamping: 0.5,
+            initialSpringVelocity: 8,
+            options: [.allowUserInteraction, .allowAnimatedContent],
+            animations: { [weak cell] in cell?.transform = .init(scaleX: 0.9, y: 0.9) })
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        UIView.animate(
+            withDuration: 1.0,
+            delay: 0,
+            usingSpringWithDamping: 0.5,
+            initialSpringVelocity: 5.0,
+            options: [.allowUserInteraction, .allowAnimatedContent],
+            animations: { [weak cell] in cell?.transform = .identity })
     }
 }
 
@@ -136,7 +165,7 @@ extension HomeViewController: HomeViewDelegate {
             self.cartView.alpha = 0
             self.shouldHideCartView = false
             
-            UIView.animate(withDuration: 0.75, delay: 0.0, options: .curveEaseInOut) { [weak self] in
+            UIView.animate(withDuration: 0.75, delay: 0.0, options: .allowAnimatedContent) { [weak self] in
                 self?.cartView.alpha = 1.0
             } completion: { [weak self] finished in
                 if finished {
