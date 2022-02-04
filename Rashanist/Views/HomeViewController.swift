@@ -200,7 +200,7 @@ extension HomeViewController: UIViewControllerTransitioningDelegate {
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         transition.transitionMode = .dismiss
-        transition.startingPoint = cartView.printButton.center
+        transition.startingPoint = .init(x: cartView.frame.maxX, y: cartView.frame.maxY)
         transition.bubbleColor = .white
         return transition
     }
